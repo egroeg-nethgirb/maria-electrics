@@ -1,4 +1,4 @@
-  :root{
+:root{
     /* palette drawn from the Maria Electrics logo */
     --paper:#F5F8FC;
     --paper-dim:#E9EFF7;
@@ -524,125 +524,6 @@
     border-radius:999px;
   }
 
-  /* ---------- INTERIOR REVEAL CARDS ---------- */
-  .reveal-section{background:var(--paper);}
-  .reveal-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-  .reveal-card{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 4px 14px rgba(18,41,79,0.06);
-  }
-  .reveal-card-grid{
-    display:grid;
-    grid-template-columns:1.15fr 0.85fr;
-    align-items:stretch;
-  }
-  @media (max-width:860px){
-    .reveal-card-grid{grid-template-columns:1fr;}
-  }
-  .reveal-stage{
-    position:relative;
-    background:var(--paper-dim);
-    aspect-ratio:4/3;
-    overflow:hidden;
-    cursor:crosshair;
-    touch-action:none;
-    border-right:1px solid var(--line);
-  }
-  @media (max-width:860px){.reveal-stage{border-right:none; border-bottom:1px solid var(--line);}}
-  .reveal-stage svg{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-  }
-  .layer-exterior{z-index:1;}
-  .layer-interior{
-    z-index:2;
-    clip-path: circle(120px at 50% 50%);
-    transition: clip-path 0.05s linear;
-  }
-  .reveal-stage.revealed .layer-interior{
-    clip-path: circle(1200px at 50% 50%);
-  }
-  .reveal-lens{
-    position:absolute;
-    z-index:3;
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    border:2px solid var(--cyan);
-    box-shadow:0 0 0 2000px rgba(18,41,79,0.06), 0 6px 18px rgba(18,41,79,0.25);
-    pointer-events:none;
-    transform:translate(-50%,-50%);
-    opacity:0;
-    transition:opacity 0.15s ease;
-  }
-  .reveal-stage:hover .reveal-lens,
-  .reveal-stage.touched .reveal-lens{opacity:1;}
-  .reveal-stage.revealed .reveal-lens{opacity:0;}
-  .reveal-badge{
-    position:absolute;
-    top:14px; left:14px;
-    z-index:4;
-    background:rgba(18,41,79,0.85);
-    color:#fff;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:0.06em;
-    padding:6px 11px;
-    border-radius:999px;
-    pointer-events:none;
-  }
-  .reveal-toggle{
-    position:absolute;
-    bottom:14px; right:14px;
-    z-index:4;
-    background:#fff;
-    border:1px solid var(--line);
-    color:var(--blue);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    font-weight:600;
-    letter-spacing:0.03em;
-    padding:8px 13px;
-    border-radius:999px;
-    cursor:pointer;
-  }
-  .reveal-toggle:hover{background:var(--paper);}
-  .reveal-info{
-    padding:28px 26px;
-    display:flex;
-    flex-direction:column;
-  }
-  .reveal-info .svc-no{display:block; margin-bottom:6px;}
-  .reveal-info h2{font-size:22px; margin-bottom:8px;}
-  .reveal-info > p{color:var(--ink-soft); font-size:14.5px; margin-bottom:18px;}
-  .part-list{list-style:none; padding:0; margin:0;}
-  .part-list li{
-    display:flex;
-    gap:10px;
-    align-items:flex-start;
-    font-size:13.5px;
-    color:var(--ink-soft);
-    padding:9px 0;
-    border-top:1px solid var(--line);
-  }
-  .part-list li:first-child{border-top:none;}
-  .part-dot{
-    flex-shrink:0;
-    width:9px; height:9px;
-    border-radius:50%;
-    margin-top:4px;
-  }
-  .part-list strong{color:var(--ink); font-weight:600;}
-
   /* ---------- SVG helper fills ---------- */
   .sv-blue{fill:var(--blue);}
   .sv-blue-ink{fill:var(--blue-ink);}
@@ -655,6 +536,93 @@
   .sv-copper{fill:#C9822E;}
   .sv-stroke-ink{stroke:var(--ink); fill:none;}
   .sv-stroke-soft{stroke:var(--ink-soft); fill:none;}
+
+  /* ---------- EXPLODED PARTS DIAGRAMS ---------- */
+  .exploded-section{background:var(--paper);}
+  .exploded-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+  }
+  @media (max-width:980px){.exploded-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:620px){.exploded-grid{grid-template-columns:1fr;}}
+  .exploded-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 4px 14px rgba(18,41,79,0.06);
+    display:flex;
+    flex-direction:column;
+  }
+  .exploder{
+    position:relative;
+    background: radial-gradient(ellipse 90% 70% at 50% 30%, #ffffff 0%, var(--paper-dim) 100%);
+    aspect-ratio:5/7;
+    overflow:hidden;
+    cursor:pointer;
+  }
+  .exploder svg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:block;
+    overflow:visible;
+  }
+  .exploder .part{
+    transition:transform 0.6s cubic-bezier(.22,.85,.28,1);
+  }
+  .exploder:not(:hover):not(.exploded) .part{
+    transform:translateY(var(--cy,0px));
+  }
+  .exploder .part-label-group{
+    opacity:0;
+    transition:opacity 0.3s ease 0.05s;
+  }
+  .exploder:hover .part-label-group,
+  .exploder.exploded .part-label-group{
+    opacity:1;
+  }
+  .exploder-hint{
+    position:absolute;
+    left:50%; bottom:16px;
+    transform:translateX(-50%);
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:rgba(18,41,79,0.85);
+    color:#fff;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.05em;
+    padding:6px 12px;
+    border-radius:999px;
+    white-space:nowrap;
+    opacity:1;
+    transition:opacity 0.25s ease;
+    pointer-events:none;
+  }
+  .exploder:hover .exploder-hint,
+  .exploder.exploded .exploder-hint{opacity:0;}
+  .exploder-title{
+    position:absolute;
+    top:14px; left:14px;
+    z-index:5;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--blue);
+    background:rgba(255,255,255,0.9);
+    padding:5px 10px;
+    border-radius:999px;
+    pointer-events:none;
+  }
+  .exploded-caption{padding:20px 20px 22px;}
+  .exploded-caption .svc-no{display:block; margin-bottom:4px;}
+  .exploded-caption h2{font-size:19px; margin-bottom:6px;}
+  .exploded-caption p{font-size:13.5px; color:var(--ink-soft); margin:0;}
 
   /* ---------- FOOTER ---------- */
   footer{
