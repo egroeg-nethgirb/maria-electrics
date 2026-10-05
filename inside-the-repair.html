@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parts Inside — Fan, Mixer, Iron Box &amp; Water Motor | Maria Electrics</title>
-<meta name="description" content="A look at what's actually inside a ceiling fan, table fan, water motor, mixer and iron box — the parts Maria Electrics repairs every day in Kottappady.">
+<title>Parts Inside — Fan, Mixer, Water Motor &amp; Iron Box | Maria Electrics</title>
+<meta name="description" content="Hover over a ceiling fan, table fan, water motor, mixer or iron box to see it come apart and reveal the parts inside. From Maria Electrics, Kottappady.">
 <link rel="icon" type="image/png" href="maria-electrics-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,46 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- shared gradients used by every exploded diagram -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <linearGradient id="gradChrome" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="45%" stop-color="#d7dee5"/>
+    <stop offset="100%" stop-color="#8c98a5"/>
+  </linearGradient>
+  <linearGradient id="gradMetal" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#eef1f4"/>
+    <stop offset="55%" stop-color="#b7c1cb"/>
+    <stop offset="100%" stop-color="#7c8794"/>
+  </linearGradient>
+  <linearGradient id="gradMetalDark" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#aab4bf"/>
+    <stop offset="100%" stop-color="#5f6975"/>
+  </linearGradient>
+  <linearGradient id="gradWood" x1="0" y1="0" x2="1" y2="0.3">
+    <stop offset="0%" stop-color="#b17f4a"/>
+    <stop offset="100%" stop-color="#5c3b21"/>
+  </linearGradient>
+  <linearGradient id="gradBlue" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#3f7bea"/>
+    <stop offset="100%" stop-color="#123c9e"/>
+  </linearGradient>
+  <linearGradient id="gradCopper" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#eab884"/>
+    <stop offset="100%" stop-color="#a9722e"/>
+  </linearGradient>
+  <linearGradient id="gradGlass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f2fcff"/>
+    <stop offset="100%" stop-color="#bfe9f4"/>
+  </linearGradient>
+  <radialGradient id="gradHub" cx="35%" cy="30%" r="75%">
+    <stop offset="0%" stop-color="#e4e9ee"/>
+    <stop offset="100%" stop-color="#7c8794"/>
+  </radialGradient>
+</defs>
+</svg>
 
 <header>
   <div class="nav">
@@ -21,9 +61,10 @@
     </a>
     <nav class="links">
       <a href="index.html#services">Repairs</a>
-      <a href="inside-the-repair.html">Parts inside</a>
+      <a href="diagnose.html">Diagnose my appliance</a>
+      <a href="inside-the-repair.html">See the interior</a>
       <a href="index.html#area">Service area</a>
-      <a href="tel:+919495600876" class="nav-cta">Call Now</a>
+      <a href="tel:+919847000000" class="nav-cta">Call Now</a>
     </nav>
   </div>
 </header>
@@ -33,9 +74,10 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="wrap">
-      <p class="eyebrow">What's actually inside</p>
-      <h1>The parts we're really working on.</h1>
-      <p>Every repair comes down to a handful of components — a coil, a shaft, a thermostat, a switch. Here's what's inside the appliances we fix most often.</p>
+      <p class="eyebrow">Parts, exploded</p>
+      <h1>Hover over an appliance to watch it come apart.</h1>
+      <p>This is what we're actually opening up when your fan won't spin, your mixer won't start, your water motor won't prime, or your iron won't heat.</p>
+      <span class="hint">↳ Hover, or tap on a phone</span>
     </div>
   </section>
 
@@ -46,268 +88,329 @@
 
         <!-- CEILING FAN -->
         <div class="exploded-card">
-          <div class="exploded-visual">
-            <svg viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="620" fill="#E9EFF7"/>
-              <line x1="200" y1="30" x2="200" y2="330" stroke="#c3ccd6" stroke-width="1.5" stroke-dasharray="4 5"/>
+          <div class="exploder" data-exploder tabindex="0">
+            <span class="exploder-title">Ceiling Fan</span>
+            <span class="exploder-hint">Hover to explode ↕</span>
+            <svg viewBox="0 0 300 560">
+              <g class="part-label-group">
+                <line x1="176" y1="45" x2="222" y2="45" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="176" cy="45" r="3" fill="#1B54D6"/>
+                <text x="226" y="49" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Base plate</text>
 
-              <ellipse cx="200" cy="34" rx="34" ry="10" fill="#C9822E" stroke="#3A4655" stroke-width="1.5"/>
-              <circle cx="200" cy="34" r="6" fill="#3A4655"/>
+                <line x1="160" y1="120" x2="222" y2="120" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="160" cy="120" r="3" fill="#1B54D6"/>
+                <text x="226" y="124" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Downrod</text>
 
-              <rect x="195" y="46" width="10" height="60" fill="#8794a1"/>
+                <line x1="200" y1="205" x2="222" y2="205" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="200" cy="205" r="3" fill="#1B54D6"/>
+                <text x="226" y="209" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Housing cover</text>
 
-              <path d="M155 128 A45 34 0 0 1 245 128 Z" fill="#1B54D6"/>
-              <ellipse cx="200" cy="128" rx="45" ry="12" fill="#123C9E"/>
+                <line x1="205" y1="300" x2="222" y2="300" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="205" cy="300" r="3" fill="#1B54D6"/>
+                <text x="226" y="304" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Motor coil</text>
 
-              <rect x="150" y="140" width="100" height="80" rx="12" fill="#fff" stroke="#c9d2db" stroke-width="2"/>
-              <g stroke="#C9822E" stroke-width="5" stroke-linecap="round" fill="none">
-                <path d="M170 180 a30 30 0 0 1 60 0"/>
-                <path d="M177 162 a26 26 0 0 1 46 0"/>
+                <line x1="262" y1="420" x2="222" y2="420" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="262" cy="420" r="3" fill="#1B54D6"/>
+                <text x="226" y="424" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655" text-anchor="end">Blades</text>
+
+                <line x1="150" y1="500" x2="222" y2="500" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="150" cy="500" r="3" fill="#1B54D6"/>
+                <text x="226" y="504" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Pull switch</text>
               </g>
-              <circle cx="200" cy="180" r="10" fill="#12294F"/>
 
-              <circle cx="200" cy="234" r="14" fill="#3A4655"/>
-
-              <g>
-                <rect x="192" y="234" width="14" height="120" rx="6" fill="#8B5E3C" stroke="#5c3c22" stroke-width="1.5" transform="rotate(0 200 234)"/>
-                <rect x="192" y="234" width="14" height="120" rx="6" fill="#8B5E3C" stroke="#5c3c22" stroke-width="1.5" transform="rotate(90 200 234)"/>
-                <rect x="192" y="234" width="14" height="120" rx="6" fill="#9c6b45" stroke="#5c3c22" stroke-width="1.5" transform="rotate(180 200 234)"/>
-                <rect x="192" y="234" width="14" height="120" rx="6" fill="#9c6b45" stroke="#5c3c22" stroke-width="1.5" transform="rotate(270 200 234)"/>
+              <g class="part" style="--cy:217px">
+                <circle cx="150" cy="45" r="19" fill="url(#gradChrome)" stroke="#7c8794" stroke-width="1"/>
+                <circle cx="150" cy="45" r="4" fill="#5f6975"/>
               </g>
-
-              <line x1="200" y1="360" x2="200" y2="420" stroke="#8794a1" stroke-width="1.5" stroke-dasharray="3 4"/>
-              <circle cx="200" cy="428" r="9" fill="#4FC3E8" stroke="#2FA9D4" stroke-width="1.5"/>
-
-              <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">
-                <line x1="234" y1="34" x2="270" y2="34" stroke="#8794a1"/>
-                <text x="274" y="38">Base Plate</text>
-
-                <line x1="215" y1="76" x2="270" y2="76" stroke="#8794a1"/>
-                <text x="274" y="80">Downrod</text>
-
-                <line x1="245" y1="122" x2="290" y2="110" stroke="#8794a1"/>
-                <text x="294" y="114">Housing Cover</text>
-
-                <line x1="250" y1="180" x2="290" y2="180" stroke="#8794a1"/>
-                <text x="294" y="184">Motor</text>
-
-                <line x1="306" y1="290" x2="330" y2="290" stroke="#8794a1"/>
-                <text x="334" y="294">Blade</text>
-
-                <line x1="209" y1="428" x2="240" y2="428" stroke="#8794a1"/>
-                <text x="244" y="432">Pull Switch</text>
+              <g class="part" style="--cy:153px">
+                <rect x="145" y="66" width="10" height="90" rx="3" fill="url(#gradMetal)" stroke="#7c8794" stroke-width="0.5"/>
+              </g>
+              <g class="part" style="--cy:77px">
+                <ellipse cx="150" cy="205" rx="58" ry="30" fill="url(#gradChrome)" stroke="#7c8794" stroke-width="1"/>
+                <ellipse cx="150" cy="198" rx="40" ry="16" fill="#eef1f4" opacity="0.6"/>
+              </g>
+              <g class="part" style="--cy:0px">
+                <rect x="92" y="270" width="116" height="62" rx="30" fill="url(#gradMetal)" stroke="#7c8794" stroke-width="1"/>
+                <g stroke="url(#gradCopper)" stroke-width="6" fill="none" stroke-linecap="round">
+                  <path d="M115 301 a35 22 0 0 1 70 0"/>
+                  <path d="M122 301 a28 17 0 0 1 56 0"/>
+                </g>
+                <circle cx="150" cy="301" r="12" fill="url(#gradHub)"/>
+              </g>
+              <g class="part" style="--cy:-102px">
+                <circle cx="150" cy="420" r="17" fill="url(#gradHub)" stroke="#5f6975" stroke-width="1"/>
+                <g transform="rotate(0 150 420)"><rect x="135" y="300" width="30" height="118" rx="12" fill="url(#gradWood)"/></g>
+                <g transform="rotate(90 150 420)"><rect x="135" y="300" width="30" height="118" rx="12" fill="url(#gradWood)"/></g>
+                <g transform="rotate(180 150 420)"><rect x="135" y="300" width="30" height="118" rx="12" fill="url(#gradWood)"/></g>
+                <g transform="rotate(270 150 420)"><rect x="135" y="300" width="30" height="118" rx="12" fill="url(#gradWood)"/></g>
+              </g>
+              <g class="part" style="--cy:-174px">
+                <line x1="150" y1="470" x2="150" y2="498" stroke="#5f6975" stroke-width="2"/>
+                <rect x="141" y="498" width="18" height="14" rx="4" fill="url(#gradMetalDark)"/>
               </g>
             </svg>
           </div>
           <div class="exploded-caption">
             <span class="svc-no mono">01</span>
             <h2>Ceiling Fan</h2>
-            <p>Most call-outs are the motor coil, a worn capacitor, or a bearing that's started to whine.</p>
+            <p>Base plate, downrod, housing, motor coil, blades and pull switch — the six things that decide whether it spins.</p>
           </div>
         </div>
 
         <!-- TABLE FAN -->
         <div class="exploded-card">
-          <div class="exploded-visual">
-            <svg viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="620" fill="#E9EFF7"/>
-              <line x1="200" y1="40" x2="200" y2="480" stroke="#c3ccd6" stroke-width="1.5" stroke-dasharray="4 5"/>
+          <div class="exploder" data-exploder tabindex="0">
+            <span class="exploder-title">Table Fan</span>
+            <span class="exploder-hint">Hover to explode ↕</span>
+            <svg viewBox="0 0 300 560">
+              <g class="part-label-group">
+                <line x1="150" y1="50" x2="222" y2="50" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="150" cy="50" r="3" fill="#1B54D6"/>
+                <text x="226" y="54" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Guard cap</text>
 
-              <g stroke-width="2.5" fill="none">
-                <circle cx="200" cy="150" r="86" stroke="#8794a1"/>
-                <circle cx="200" cy="150" r="70" stroke="#8794a1" stroke-width="1.5"/>
-                <line x1="200" y1="66" x2="200" y2="234" stroke="#8794a1" stroke-width="1.5"/>
-                <line x1="118" y1="150" x2="282" y2="150" stroke="#8794a1" stroke-width="1.5"/>
-                <line x1="142" y1="92" x2="258" y2="208" stroke="#8794a1" stroke-width="1.5"/>
-                <line x1="258" y1="92" x2="142" y2="208" stroke="#8794a1" stroke-width="1.5"/>
+                <line x1="215" y1="150" x2="222" y2="150" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="215" cy="150" r="3" fill="#1B54D6"/>
+                <text x="226" y="154" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Front guard</text>
+
+                <line x1="205" y1="260" x2="222" y2="260" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="205" cy="260" r="3" fill="#1B54D6"/>
+                <text x="226" y="264" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Blades</text>
+
+                <line x1="205" y1="370" x2="222" y2="370" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="205" cy="370" r="3" fill="#1B54D6"/>
+                <text x="226" y="374" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Motor coil</text>
+
+                <line x1="150" y1="470" x2="222" y2="470" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="150" cy="470" r="3" fill="#1B54D6"/>
+                <text x="226" y="474" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Base &amp; stand</text>
               </g>
-              <circle cx="200" cy="150" r="24" fill="#1B54D6"/>
-              <circle cx="200" cy="150" r="9" fill="#123C9E"/>
 
-              <rect x="170" y="252" width="60" height="70" rx="10" fill="#fff" stroke="#c9d2db" stroke-width="2"/>
-              <g stroke="#C9822E" stroke-width="4.5" stroke-linecap="round" fill="none">
-                <path d="M182 300 a18 18 0 0 1 36 0"/>
-                <path d="M187 286 a16 16 0 0 1 26 0"/>
+              <g class="part" style="--cy:272px">
+                <circle cx="150" cy="50" r="14" fill="url(#gradChrome)" stroke="#7c8794" stroke-width="1"/>
               </g>
-
-              <rect x="252" y="330" width="26" height="42" rx="6" fill="#4FC3E8"/>
-
-              <rect x="192" y="322" width="16" height="90" fill="#8794a1"/>
-              <rect x="150" y="410" width="100" height="14" rx="6" fill="#5C6B7A"/>
-
-              <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">
-                <line x1="286" y1="150" x2="320" y2="150" stroke="#8794a1"/>
-                <text x="200" y="52" text-anchor="middle">Guard &amp; Blades</text>
-
-                <line x1="230" y1="287" x2="270" y2="270" stroke="#8794a1"/>
-                <text x="274" y="274">Motor Coil</text>
-
-                <line x1="278" y1="351" x2="310" y2="351" stroke="#8794a1"/>
-                <text x="314" y="355">Capacitor</text>
-
-                <line x1="208" y1="366" x2="150" y2="366" stroke="#8794a1"/>
-                <text x="70" y="370">Shaft</text>
-
-                <line x1="200" y1="424" x2="200" y2="450" stroke="#8794a1"/>
-                <text x="200" y="466" text-anchor="middle">Base &amp; Stand</text>
+              <g class="part" style="--cy:187px">
+                <circle cx="150" cy="150" r="80" fill="none" stroke="url(#gradMetal)" stroke-width="5"/>
+                <circle cx="150" cy="150" r="63" fill="none" stroke="#b7c1cb" stroke-width="2"/>
+                <g stroke="#b7c1cb" stroke-width="1.5">
+                  <line x1="150" y1="72" x2="150" y2="228"/>
+                  <line x1="72" y1="150" x2="228" y2="150"/>
+                  <line x1="94" y1="94" x2="206" y2="206"/>
+                  <line x1="206" y1="94" x2="94" y2="206"/>
+                </g>
+              </g>
+              <g class="part" style="--cy:93.5px">
+                <circle cx="150" cy="260" r="16" fill="url(#gradHub)"/>
+                <g transform="rotate(20 150 260)"><path d="M150 260 L205 235 Q220 258 150 262 Z" fill="url(#gradMetal)"/></g>
+                <g transform="rotate(140 150 260)"><path d="M150 260 L205 235 Q220 258 150 262 Z" fill="url(#gradMetal)"/></g>
+                <g transform="rotate(260 150 260)"><path d="M150 260 L205 235 Q220 258 150 262 Z" fill="url(#gradMetal)"/></g>
+              </g>
+              <g class="part" style="--cy:0px">
+                <ellipse cx="150" cy="370" rx="64" ry="46" fill="url(#gradMetal)" stroke="#7c8794" stroke-width="1"/>
+                <g stroke="url(#gradCopper)" stroke-width="6" fill="none" stroke-linecap="round">
+                  <path d="M118 370 a32 22 0 0 1 64 0"/>
+                  <path d="M124 370 a26 17 0 0 1 52 0"/>
+                </g>
+                <circle cx="150" cy="370" r="10" fill="url(#gradHub)"/>
+              </g>
+              <g class="part" style="--cy:-93.5px">
+                <rect x="145" y="415" width="10" height="45" fill="url(#gradMetalDark)"/>
+                <path d="M100 460 Q150 445 200 460 L212 478 Q150 468 88 478 Z" fill="url(#gradMetalDark)"/>
               </g>
             </svg>
           </div>
           <div class="exploded-caption">
             <span class="svc-no mono">02</span>
             <h2>Table Fan</h2>
-            <p>Rewinding, capacitor swaps, and speed-regulator faults are the everyday jobs here.</p>
+            <p>Guard, blades, motor coil and the base that keeps it steady — most faults come down to the coil or the capacitor.</p>
           </div>
         </div>
 
         <!-- WATER MOTOR -->
         <div class="exploded-card">
-          <div class="exploded-visual">
-            <svg viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="620" fill="#E9EFF7"/>
-              <line x1="200" y1="60" x2="200" y2="460" stroke="#c3ccd6" stroke-width="1.5" stroke-dasharray="4 5"/>
+          <div class="exploder" data-exploder tabindex="0">
+            <span class="exploder-title">Water Motor</span>
+            <span class="exploder-hint">Hover to explode ↕</span>
+            <svg viewBox="0 0 300 560">
+              <g class="part-label-group">
+                <line x1="150" y1="50" x2="222" y2="50" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="150" cy="50" r="3" fill="#1B54D6"/>
+                <text x="226" y="54" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Outlet cap</text>
 
-              <rect x="160" y="70" width="80" height="46" rx="8" fill="#5C6B7A"/>
-              <rect x="182" y="82" width="36" height="22" rx="4" fill="#3A4655"/>
+                <line x1="180" y1="150" x2="222" y2="150" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="180" cy="150" r="3" fill="#1B54D6"/>
+                <text x="226" y="154" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Impeller</text>
 
-              <rect x="140" y="128" width="120" height="140" rx="16" fill="#1B54D6"/>
-              <g stroke="#C9822E" stroke-width="6" stroke-linecap="round" fill="none">
-                <path d="M165 198 a35 35 0 0 1 70 0"/>
-                <path d="M173 176 a30 30 0 0 1 54 0"/>
+                <line x1="195" y1="250" x2="222" y2="250" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="195" cy="250" r="3" fill="#1B54D6"/>
+                <text x="226" y="254" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Pump casing</text>
+
+                <line x1="205" y1="360" x2="222" y2="360" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="205" cy="360" r="3" fill="#1B54D6"/>
+                <text x="226" y="364" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Motor coil</text>
+
+                <line x1="230" y1="450" x2="222" y2="450" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="230" cy="450" r="3" fill="#1B54D6"/>
+                <text x="226" y="454" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655" text-anchor="end">Capacitor</text>
+
+                <line x1="150" y1="500" x2="222" y2="500" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="150" cy="500" r="3" fill="#1B54D6"/>
+                <text x="226" y="504" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Base &amp; feet</text>
               </g>
-              <circle cx="200" cy="198" r="12" fill="#12294F"/>
 
-              <rect x="192" y="268" width="16" height="46" fill="#8794a1"/>
-
-              <path d="M155 314 L245 314 L232 366 L168 366 Z" fill="#4FC3E8"/>
-              <g fill="#2FA9D4">
-                <path d="M170 320 L200 340 L170 360 Z"/>
-                <path d="M230 320 L200 340 L230 360 Z"/>
+              <g class="part" style="--cy:263.5px">
+                <rect x="128" y="30" width="44" height="34" rx="8" fill="url(#gradChrome)" stroke="#7c8794" stroke-width="1"/>
+                <rect x="118" y="58" width="64" height="14" rx="6" fill="url(#gradMetal)"/>
               </g>
-
-              <path d="M245 330 Q300 330 300 375 Q300 400 270 400 L245 400" fill="none" stroke="#8794a1" stroke-width="10"/>
-
-              <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">
-                <line x1="240" y1="90" x2="280" y2="90" stroke="#8794a1"/>
-                <text x="284" y="94">Terminal Box</text>
-
-                <line x1="260" y1="180" x2="300" y2="170" stroke="#8794a1"/>
-                <text x="304" y="174">Motor Coil</text>
-
-                <line x1="208" y1="290" x2="270" y2="290" stroke="#8794a1"/>
-                <text x="274" y="294">Shaft</text>
-
-                <line x1="245" y1="345" x2="300" y2="345" stroke="#8794a1" opacity="0"/>
-                <text x="140" y="350" text-anchor="end">Impeller</text>
-                <line x1="155" y1="345" x2="145" y2="345" stroke="#8794a1"/>
-
-                <text x="248" y="415">Outlet Casing</text>
-                <line x1="290" y1="405" x2="290" y2="411" stroke="#8794a1"/>
+              <g class="part" style="--cy:178.5px">
+                <circle cx="150" cy="150" r="34" fill="url(#gradMetalDark)"/>
+                <g stroke="#dfe5eb" stroke-width="3" fill="none">
+                  <path d="M150 150 L150 122"/>
+                  <path d="M150 150 L174 165"/>
+                  <path d="M150 150 L126 165"/>
+                </g>
+                <circle cx="150" cy="150" r="7" fill="#eef1f4"/>
+              </g>
+              <g class="part" style="--cy:93.5px">
+                <path d="M96 220 Q150 195 204 220 L204 280 Q150 300 96 280 Z" fill="url(#gradMetal)" stroke="#7c8794" stroke-width="1"/>
+              </g>
+              <g class="part" style="--cy:0px">
+                <rect x="102" y="325" width="96" height="70" rx="14" fill="url(#gradMetal)" stroke="#7c8794" stroke-width="1"/>
+                <g stroke="url(#gradCopper)" stroke-width="6" fill="none" stroke-linecap="round">
+                  <path d="M122 360 a28 20 0 0 1 56 0"/>
+                  <path d="M128 360 a22 15 0 0 1 44 0"/>
+                </g>
+              </g>
+              <g class="part" style="--cy:-93.5px">
+                <rect x="205" y="420" width="26" height="42" rx="7" fill="url(#gradChrome)" stroke="#7c8794" stroke-width="1"/>
+              </g>
+              <g class="part" style="--cy:-93.5px">
+                <rect x="112" y="470" width="76" height="14" rx="5" fill="url(#gradMetalDark)"/>
+                <rect x="118" y="484" width="10" height="12" fill="#5f6975"/>
+                <rect x="172" y="484" width="10" height="12" fill="#5f6975"/>
               </g>
             </svg>
           </div>
           <div class="exploded-caption">
             <span class="svc-no mono">03</span>
             <h2>Water Motor</h2>
-            <p>Burnt coils and worn impellers are what usually stop these from priming.</p>
+            <p>Impeller, casing, coil and capacitor — the usual reasons a pump hums but won't actually push water.</p>
           </div>
         </div>
 
         <!-- MIXER & GRINDER -->
         <div class="exploded-card">
-          <div class="exploded-visual">
-            <svg viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="620" fill="#E9EFF7"/>
-              <line x1="200" y1="50" x2="200" y2="440" stroke="#c3ccd6" stroke-width="1.5" stroke-dasharray="4 5"/>
+          <div class="exploder" data-exploder tabindex="0">
+            <span class="exploder-title">Mixer &amp; Grinder</span>
+            <span class="exploder-hint">Hover to explode ↕</span>
+            <svg viewBox="0 0 300 560">
+              <g class="part-label-group">
+                <line x1="150" y1="55" x2="222" y2="55" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="150" cy="55" r="3" fill="#1B54D6"/>
+                <text x="226" y="59" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Lid</text>
 
-              <ellipse cx="200" cy="60" rx="34" ry="9" fill="#5C6B7A"/>
+                <line x1="195" y1="165" x2="222" y2="165" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="195" cy="165" r="3" fill="#1B54D6"/>
+                <text x="226" y="169" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Jar</text>
 
-              <path d="M165 78 L235 78 L222 190 L178 190 Z" fill="#fff" stroke="#c9d2db" stroke-width="2"/>
+                <line x1="180" y1="275" x2="222" y2="275" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="180" cy="275" r="3" fill="#1B54D6"/>
+                <text x="226" y="279" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Blade coupler</text>
 
-              <path d="M188 190 L212 190 L204 210 L196 210 Z" fill="#3A4655"/>
-              <circle cx="200" cy="216" r="7" fill="#3A4655"/>
-              <line x1="180" y1="214" x2="160" y2="200" stroke="#3A4655" stroke-width="3"/>
-              <line x1="220" y1="214" x2="240" y2="200" stroke="#3A4655" stroke-width="3"/>
+                <line x1="205" y1="385" x2="222" y2="385" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="205" cy="385" r="3" fill="#1B54D6"/>
+                <text x="226" y="389" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Motor coil</text>
 
-              <rect x="192" y="223" width="16" height="70" fill="#8794a1"/>
-
-              <rect x="130" y="293" width="140" height="100" rx="16" fill="#1B54D6"/>
-              <g stroke="#C9822E" stroke-width="6" stroke-linecap="round" fill="none">
-                <path d="M164 348 a36 36 0 0 1 72 0"/>
-                <path d="M172 328 a30 30 0 0 1 56 0"/>
+                <line x1="150" y1="475" x2="222" y2="475" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="150" cy="475" r="3" fill="#1B54D6"/>
+                <text x="226" y="479" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Base</text>
               </g>
-              <circle cx="200" cy="348" r="12" fill="#12294F"/>
-              <circle cx="248" cy="368" r="11" fill="#4FC3E8"/>
 
-              <rect x="150" y="405" width="100" height="12" rx="5" fill="#5C6B7A"/>
-
-              <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">
-                <line x1="235" y1="130" x2="270" y2="130" stroke="#8794a1"/>
-                <text x="274" y="134">Jar</text>
-
-                <line x1="222" y1="200" x2="270" y2="200" stroke="#8794a1"/>
-                <text x="274" y="204">Blade &amp; Coupler</text>
-
-                <line x1="270" y1="330" x2="300" y2="320" stroke="#8794a1"/>
-                <text x="304" y="324">Motor Coil</text>
-
-                <line x1="259" y1="368" x2="300" y2="380" stroke="#8794a1"/>
-                <text x="304" y="384">Speed Knob</text>
+              <g class="part" style="--cy:280.5px">
+                <ellipse cx="150" cy="55" rx="34" ry="10" fill="url(#gradChrome)" stroke="#7c8794" stroke-width="1"/>
+                <rect x="144" y="34" width="12" height="20" rx="4" fill="url(#gradMetalDark)"/>
+              </g>
+              <g class="part" style="--cy:187px">
+                <path d="M118 90 L182 90 L168 240 L132 240 Z" fill="url(#gradGlass)" stroke="#9fd6e8" stroke-width="1.5"/>
+                <ellipse cx="150" cy="90" rx="32" ry="9" fill="#dff6fb" stroke="#9fd6e8" stroke-width="1"/>
+              </g>
+              <g class="part" style="--cy:93.5px">
+                <path d="M138 260 L162 260 L156 292 L144 292 Z" fill="url(#gradMetalDark)"/>
+                <circle cx="150" cy="296" r="10" fill="url(#gradHub)"/>
+                <g transform="rotate(15 150 296)"><rect x="120" y="293" width="60" height="7" rx="3" fill="url(#gradMetal)"/></g>
+                <g transform="rotate(105 150 296)"><rect x="120" y="293" width="60" height="7" rx="3" fill="url(#gradMetal)"/></g>
+              </g>
+              <g class="part" style="--cy:0px">
+                <rect x="98" y="340" width="104" height="90" rx="18" fill="url(#gradBlue)"/>
+                <rect x="98" y="340" width="104" height="16" rx="8" fill="#123c9e"/>
+                <g stroke="url(#gradCopper)" stroke-width="6" fill="none" stroke-linecap="round">
+                  <path d="M120 400 a30 24 0 0 1 60 0"/>
+                </g>
+                <circle cx="220" cy="400" r="10" fill="#4FC3E8"/>
+              </g>
+              <g class="part" style="--cy:-85px">
+                <rect x="112" y="460" width="76" height="16" rx="6" fill="url(#gradMetalDark)"/>
               </g>
             </svg>
           </div>
           <div class="exploded-caption">
             <span class="svc-no mono">04</span>
             <h2>Mixer &amp; Grinder</h2>
-            <p>Blade couplers wear out fast — that and the coil are what we replace most.</p>
+            <p>Jar, blade coupler and motor coil — worn couplers and burnt coils are the two most common repairs.</p>
           </div>
         </div>
 
         <!-- IRON BOX -->
         <div class="exploded-card">
-          <div class="exploded-visual">
-            <svg viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="620" fill="#E9EFF7"/>
-              <line x1="200" y1="70" x2="200" y2="380" stroke="#c3ccd6" stroke-width="1.5" stroke-dasharray="4 5"/>
+          <div class="exploder" data-exploder tabindex="0">
+            <span class="exploder-title">Iron Box</span>
+            <span class="exploder-hint">Hover to explode ↕</span>
+            <svg viewBox="0 0 300 560">
+              <g class="part-label-group">
+                <line x1="150" y1="65" x2="222" y2="65" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="150" cy="65" r="3" fill="#1B54D6"/>
+                <text x="226" y="69" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Handle</text>
 
-              <path d="M150 95 Q200 60 250 95" fill="none" stroke="#1B54D6" stroke-width="16" stroke-linecap="round"/>
-              <path d="M158 92 Q200 68 242 92" fill="none" stroke="#4FC3E8" stroke-width="6" stroke-linecap="round"/>
+                <line x1="205" y1="165" x2="222" y2="165" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="205" cy="165" r="3" fill="#1B54D6"/>
+                <text x="226" y="169" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Thermostat dial</text>
 
-              <circle cx="200" cy="150" r="20" fill="#fff" stroke="#8794a1" stroke-width="2"/>
-              <path d="M200 138 v14 h10" fill="none" stroke="#3A4655" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="205" y1="260" x2="222" y2="260" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="205" cy="260" r="3" fill="#1B54D6"/>
+                <text x="226" y="264" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Body shell</text>
 
-              <path d="M120 230 C150 218 250 218 280 230 L280 240 C250 228 150 228 120 240 Z" fill="none" stroke="#4FC3E8" stroke-width="5"/>
+                <line x1="205" y1="370" x2="222" y2="370" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="205" cy="370" r="3" fill="#1B54D6"/>
+                <text x="226" y="374" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Heating element</text>
 
-              <line x1="200" y1="170" x2="200" y2="270" stroke="#8794a1" stroke-width="6"/>
+                <line x1="150" y1="470" x2="222" y2="470" stroke="#8c98a5" stroke-dasharray="3 3"/>
+                <circle cx="150" cy="470" r="3" fill="#1B54D6"/>
+                <text x="226" y="474" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">Sole plate</text>
+              </g>
 
-              <path d="M90 300 L310 300 L262 260 L138 260 Z" fill="#C7D0DA" stroke="#8794a1" stroke-width="2"/>
-              <path d="M120 288 L150 280 L172 292 L198 280 L224 292 L250 280 L280 290" fill="none" stroke="#C9822E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-
-              <path d="M90 300 C 65 292, 55 272, 62 252" fill="none" stroke="#3A4655" stroke-width="6" stroke-linecap="round"/>
-
-              <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#3A4655">
-                <line x1="250" y1="96" x2="290" y2="90" stroke="#8794a1"/>
-                <text x="294" y="94">Handle</text>
-
-                <line x1="220" y1="150" x2="270" y2="150" stroke="#8794a1"/>
-                <text x="274" y="154">Thermostat</text>
-
-                <line x1="280" y1="235" x2="310" y2="235" stroke="#8794a1"/>
-                <text x="314" y="239">Internal Wiring</text>
-
-                <line x1="280" y1="288" x2="316" y2="288" stroke="#8794a1"/>
-                <text x="320" y="292">Sole Plate</text>
-
-                <line x1="200" y1="290" x2="200" y2="330" stroke="#8794a1" opacity="0"/>
-                <text x="120" y="332">Heating Element</text>
-                <line x1="150" y1="292" x2="150" y2="320" stroke="#8794a1"/>
+              <g class="part" style="--cy:170px">
+                <path d="M108 65 Q150 20 192 65 Q192 82 150 82 Q108 82 108 65 Z" fill="url(#gradBlue)"/>
+              </g>
+              <g class="part" style="--cy:85px">
+                <circle cx="150" cy="165" r="22" fill="url(#gradChrome)" stroke="#7c8794" stroke-width="1"/>
+                <line x1="150" y1="165" x2="150" y2="150" stroke="#3A4655" stroke-width="2"/>
+                <line x1="150" y1="165" x2="162" y2="172" stroke="#3A4655" stroke-width="2"/>
+              </g>
+              <g class="part" style="--cy:0px">
+                <path d="M90 300 Q150 235 210 300 Q205 320 150 320 Q95 320 90 300 Z" fill="url(#gradMetal)" stroke="#7c8794" stroke-width="1"/>
+              </g>
+              <g class="part" style="--cy:-93.5px">
+                <path d="M108 390 L200 390 L182 405 L126 405 Z" fill="url(#gradCopper)"/>
+                <path d="M112 384 L196 384 L188 392 L120 392 Z" fill="none" stroke="#8a5a24" stroke-width="1.5" stroke-dasharray="4 3"/>
+              </g>
+              <g class="part" style="--cy:-178.5px">
+                <path d="M76 455 L224 455 L200 495 L100 495 Z" fill="url(#gradMetalDark)" stroke="#3d454e" stroke-width="1"/>
               </g>
             </svg>
           </div>
           <div class="exploded-caption">
             <span class="svc-no mono">05</span>
             <h2>Iron Box</h2>
-            <p>The heating element or thermostat almost always explains a "won't heat" complaint.</p>
+            <p>Heating element and thermostat sit right under the shell — the two parts that fail most on an old iron.</p>
           </div>
         </div>
 
@@ -321,7 +424,7 @@
       <h2>Recognise the fault? We'll take it from here.</h2>
       <p>Bring it by the shop, or call and describe what you're seeing.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="tel:+919495600876">Call Now</a>
+        <a class="btn btn-primary" href="tel:+919847000000">Call Now</a>
       </div>
     </div>
   </section>
@@ -337,8 +440,8 @@
       </div>
       <div>
         <h4>Contact</h4>
-        <p><a href="tel:+919495600876">+91 94956 00876</a></p>
-        <p>Mon–Sat, 9:30 AM – 7:00 PM</p>
+        <p><a href="tel:+919847000000">+91 98470 00000</a></p>
+        <p>Mon–Sat, 9:00 AM – 7:00 PM</p>
       </div>
       <div>
         <h4>Address</h4>
@@ -354,6 +457,18 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('[data-exploder]').forEach(function(el){
+    el.addEventListener('click', function(){
+      el.classList.toggle('exploded');
+    });
+    el.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        el.classList.toggle('exploded');
+      }
+    });
+  });
 </script>
 
 </body>

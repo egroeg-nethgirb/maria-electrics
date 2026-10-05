@@ -1,4 +1,4 @@
-:root{
+  :root{
     /* palette drawn from the Maria Electrics logo */
     --paper:#F5F8FC;
     --paper-dim:#E9EFF7;
@@ -623,6 +623,131 @@
   .exploded-caption .svc-no{display:block; margin-bottom:4px;}
   .exploded-caption h2{font-size:19px; margin-bottom:6px;}
   .exploded-caption p{font-size:13.5px; color:var(--ink-soft); margin:0;}
+
+  /* ---------- DIAGNOSTIC TOOL ---------- */
+  .diag-section{background:var(--paper);}
+  .diag-breadcrumb{
+    display:flex;
+    gap:8px;
+    align-items:center;
+    flex-wrap:wrap;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.04em;
+    color:var(--ink-soft);
+    margin-bottom:30px;
+  }
+  .diag-breadcrumb .dash{color:var(--line);}
+  .diag-breadcrumb .done{color:var(--blue); font-weight:600;}
+
+  .appliance-grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:14px;
+  }
+  @media (max-width:860px){.appliance-grid{grid-template-columns:repeat(3,1fr);}}
+  @media (max-width:520px){.appliance-grid{grid-template-columns:repeat(2,1fr);}}
+
+  .appliance-btn{
+    background:#fff;
+    border:1.5px solid var(--line);
+    border-radius:14px;
+    padding:20px 10px 16px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    color:var(--ink-soft);
+    font-family:'IBM Plex Sans', sans-serif;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+  }
+  .appliance-btn svg{width:38px; height:38px; stroke:currentColor;}
+  .appliance-btn span{font-weight:600; font-size:13.5px; color:var(--ink); text-align:center;}
+  .appliance-btn:hover{border-color:var(--cyan);}
+  .appliance-btn.active{
+    border-color:var(--blue);
+    color:var(--blue);
+    box-shadow:0 0 0 3px rgba(27,84,214,0.12);
+  }
+
+  .symptom-panel{margin-top:40px;}
+  .symptom-list{display:flex; flex-direction:column; gap:10px;}
+  .symptom-btn{
+    text-align:left;
+    background:#fff;
+    border:1.5px solid var(--line);
+    border-radius:10px;
+    padding:14px 16px;
+    cursor:pointer;
+    font-size:14.5px;
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    transition:border-color 0.15s ease;
+  }
+  .symptom-btn:hover{border-color:var(--cyan);}
+  .symptom-btn.active{border-color:var(--blue); background:var(--paper-dim);}
+  .symptom-btn .arrow{color:var(--blue); font-weight:700; flex-shrink:0;}
+
+  .diagnosis-card{
+    margin-top:40px;
+    background:#fff;
+    border:1.5px solid var(--line);
+    border-radius:16px;
+    padding:30px 28px;
+    box-shadow:0 4px 14px rgba(18,41,79,0.06);
+  }
+  .diagnosis-card h3{font-size:21px; margin:10px 0 10px;}
+  .diagnosis-card p.cause{color:var(--ink-soft); font-size:15px; margin-bottom:22px; max-width:62ch;}
+
+  .danger-banner{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    background:#FDECEC;
+    border:1px solid #F3B9B9;
+    color:#9A2A2A;
+    padding:14px 16px;
+    border-radius:10px;
+    font-size:13.5px;
+    margin-bottom:22px;
+  }
+  .danger-banner strong{display:block; margin-bottom:2px;}
+
+  .book-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-bottom:18px;
+    max-width:560px;
+  }
+  @media (max-width:560px){.book-form{grid-template-columns:1fr;}}
+  .book-form input{
+    padding:11px 13px;
+    border:1.5px solid var(--line);
+    border-radius:8px;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:14px;
+    color:var(--ink);
+    background:var(--paper);
+  }
+  .book-form input:focus{outline:none; border-color:var(--blue);}
+  .diag-reset{
+    background:none;
+    border:none;
+    color:var(--ink-soft);
+    text-decoration:underline;
+    font-size:13px;
+    cursor:pointer;
+    font-family:'IBM Plex Sans', sans-serif;
+    padding:0;
+    margin-top:28px;
+  }
+  .diag-reset:hover{color:var(--ink);}
 
   /* ---------- FOOTER ---------- */
   footer{
