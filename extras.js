@@ -10,7 +10,6 @@ if(!document.getElementById('dock'))document.body.insertAdjacentHTML('beforeend'
   <div class="stage"><canvas id="cv" width="360" height="540"></canvas></div>
   <div class="d-info"><div id="msg"></div><div id="sub"></div></div>
   <div id="tools"><button data-t="0">Scraper</button><button data-t="1">Degreaser</button><button data-t="2">Wire brush</button><button data-t="3">Oil dropper</button></div>
-  <a class="d-call" href="tel:+919495600876">Need a real repair? <strong>Call +91 94956 00876</strong></a>
 </aside>`);
 const $=s=>document.querySelector(s),cv=$('#cv'),cx=cv.getContext('2d'),W=360,H=540;
 const C={ink:'#12294F',cy:'#4FC3E8',bl:'#1B54D6'};
@@ -104,17 +103,13 @@ const s=document.createElement('div');s.className='menu-scrim';document.body.app
 const set=o=>{document.body.classList.toggle('menu-open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')};
 b.onclick=()=>set(!document.body.classList.contains('menu-open'));s.onclick=()=>set(false);
 links.addEventListener('click',e=>{if(e.target.closest('a'))set(false)});addEventListener('keydown',e=>{if(e.key==='Escape')set(false)})}
-/* ---------- home page: play button shrinks to a circle, then fades as you scroll ---------- */
+/* ---------- all pages: play button shrinks to a circle as you scroll down ---------- */
 (function(){
-const seg=location.pathname.split('/').pop();
-if(seg!==''&&seg!=='index.html'&&seg!=='index')return;
 const fab=document.querySelector('.fab'),tx=fab&&fab.querySelector('.fab-tx');if(!fab||!tx)return;
-const SHRINK=220,FADE=260;let lw=0,tick=0;
+const SHRINK=160;let lw=0,tick=0;
 const measure=()=>{tx.style.maxWidth='none';tx.style.marginLeft='8px';lw=tx.scrollWidth;upd()};
-function upd(){tick=0;const y=window.scrollY||0,p=Math.min(1,Math.max(0,y/SHRINK)),f=Math.min(1,Math.max(0,(y-SHRINK)/FADE));
- tx.style.maxWidth=(lw*(1-p))+'px';tx.style.opacity=String(Math.max(0,1-p*1.4));tx.style.marginLeft=(8*(1-p))+'px';
- fab.style.opacity=String(1-f);fab.style.transform='translateY('+(-26*f)+'px) scale('+(1-.18*f)+')';
- fab.style.pointerEvents=f>.9?'none':'';fab.style.visibility=f>=1?'hidden':''}
+function upd(){tick=0;const y=window.scrollY||0,p=Math.min(1,Math.max(0,y/SHRINK))
+ tx.style.maxWidth=(lw*(1-p))+'px';tx.style.opacity=String(Math.max(0,1-p*1.4));tx.style.marginLeft=(8*(1-p))+'px';}
 addEventListener('scroll',()=>{if(!tick)tick=requestAnimationFrame(upd)},{passive:true});
 addEventListener('resize',measure);addEventListener('load',measure);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(measure);
