@@ -1,5 +1,5 @@
 (function(){
-if(!document.getElementById('dock'))document.body.insertAdjacentHTML('beforeend',`<button class="fab" data-open="">Play repair games</button>
+if(!document.getElementById('dock'))document.body.insertAdjacentHTML('beforeend',`<button class="fab" data-open="" aria-label="Play repair games"><svg class="fab-ic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg><span class="fab-tx">Play repair games</span></button>
 <div class="scrim" id="scrim"></div>
 
 <aside class="dock" id="dock" aria-label="Repair games" aria-hidden="true">
@@ -104,4 +104,20 @@ const s=document.createElement('div');s.className='menu-scrim';document.body.app
 const set=o=>{document.body.classList.toggle('menu-open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')};
 b.onclick=()=>set(!document.body.classList.contains('menu-open'));s.onclick=()=>set(false);
 links.addEventListener('click',e=>{if(e.target.closest('a'))set(false)});addEventListener('keydown',e=>{if(e.key==='Escape')set(false)})}
+/* ---------- home page: play button shrinks to a circle, then fades as you scroll ---------- */
+(function(){
+const seg=location.pathname.split('/').pop();
+if(seg!==''&&seg!=='index.html'&&seg!=='index')return;
+const fab=document.querySelector('.fab'),tx=fab&&fab.querySelector('.fab-tx');if(!fab||!tx)return;
+const SHRINK=220,FADE=260;let lw=0,tick=0;
+const measure=()=>{tx.style.maxWidth='none';tx.style.marginLeft='8px';lw=tx.scrollWidth;upd()};
+function upd(){tick=0;const y=window.scrollY||0,p=Math.min(1,Math.max(0,y/SHRINK)),f=Math.min(1,Math.max(0,(y-SHRINK)/FADE));
+ tx.style.maxWidth=(lw*(1-p))+'px';tx.style.opacity=String(Math.max(0,1-p*1.4));tx.style.marginLeft=(8*(1-p))+'px';
+ fab.style.opacity=String(1-f);fab.style.transform='translateY('+(-26*f)+'px) scale('+(1-.18*f)+')';
+ fab.style.pointerEvents=f>.9?'none':'';fab.style.visibility=f>=1?'hidden':''}
+addEventListener('scroll',()=>{if(!tick)tick=requestAnimationFrame(upd)},{passive:true});
+addEventListener('resize',measure);addEventListener('load',measure);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(measure);
+measure();
+})();
 })();
