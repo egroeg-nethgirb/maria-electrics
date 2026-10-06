@@ -106,7 +106,7 @@ links.addEventListener('click',e=>{if(e.target.closest('a'))set(false)});addEven
 /* ---------- all pages: play button shrinks to a circle as you scroll down ---------- */
 (function(){
 const fab=document.querySelector('.fab'),tx=fab&&fab.querySelector('.fab-tx');if(!fab||!tx)return;
-const SHRINK=160;let lw=0,tick=0;
+const SHRINK=360;let lw=0,tick=0;
 const measure=()=>{tx.style.maxWidth='none';tx.style.marginLeft='8px';lw=tx.scrollWidth;upd()};
 function upd(){tick=0;const y=window.scrollY||0,p=Math.min(1,Math.max(0,y/SHRINK))
  tx.style.maxWidth=(lw*(1-p))+'px';tx.style.opacity=String(Math.max(0,1-p*1.4));tx.style.marginLeft=(8*(1-p))+'px';}
