@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Repair Games — Maria Electrics, Kottappady</title>
-<meta name="description" content="Three quick repair puzzles from Maria Electrics. Play on your phone, then call us for the real thing.">
+<meta name="description" content="Four repair games from Maria Electrics, with levels that get harder. Play on your phone, then call us for the real thing.">
 <link rel="icon" type="image/png" href="maria-electrics-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 .g-hero{padding:64px 0 72px}
 .g-hero h1{max-width:16ch}
 .g-list{padding:72px 0}
-.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.g-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 @media(max-width:820px){.g-grid{grid-template-columns:1fr}}
 .g-card{padding-bottom:22px}
 .g-card button{margin-top:16px;cursor:pointer;font-family:inherit}
@@ -47,20 +47,23 @@
   <section class="hero g-hero">
     <div class="wrap">
       <p class="eyebrow">Repair games</p>
-      <h1>Fix three appliances while you wait.</h1>
-      <p class="lede">Short puzzles built for your phone. Drop the part, route the current, clean the grime. The real repairs are a phone call away.</p>
+      <h1>Four games. Each level gets harder.</h1>
+      <p class="lede">Quick games built for your phone. Catch the parts, beat the sparks, route the current, repeat the signals. Three lives, no easy wins. Real repairs are a phone call away.</p>
+      <div class="cta-row"><button class="btn btn-primary" data-open="catch" style="cursor:pointer;font-family:inherit">Play now</button></div>
+    </div>
   </section>
 
   <section class="g-list">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Pick a job</p>
-        <h2>Three repairs, about a minute each.</h2>
+        <h2>Four jobs, from slow puzzles to fast arcade.</h2>
       </div>
       <div class="g-grid">
-        <div class="svc g-card"><div class="svc-hole"></div><h3>Assembling the Core</h3><p>Tap the pins so gravity drops each fan blade, armature and gear into its housing.</p><button class="btn btn-primary" data-open="core">Play</button></div>
-        <div class="svc g-card"><div class="svc-hole"></div><h3>Current Connector</h3><p>Tap the wire blocks to turn them until power runs from the plug to the appliance.</p><button class="btn btn-primary" data-open="wire">Play</button></div>
-        <div class="svc g-card"><div class="svc-hole"></div><h3>Restoration</h3><p>Pick a tool and swipe away crust, grease, rust and grime until the part shines.</p><button class="btn btn-primary" data-open="wash">Play</button></div>
+        <div class="svc g-card"><div class="svc-hole"></div><h3>Part Catcher</h3><p>Drag the tray to catch falling gears and screws. Burnt parts and misses cost a life, and every level falls faster.</p><button class="btn btn-primary" data-open="catch" style="cursor:pointer;font-family:inherit">Play</button></div>
+        <div class="svc g-card"><div class="svc-hole"></div><h3>Fault Rush</h3><p>A 45-second arcade shift. Tap sparking appliances before they burn out, skip the live wires, and build a combo.</p><button class="btn btn-primary" data-open="rush" style="cursor:pointer;font-family:inherit">Play</button></div>
+        <div class="svc g-card"><div class="svc-hole"></div><h3>Current Connector</h3><p>Beat the clock: turn the wire blocks to route power to the appliance. The board grows every level.</p><button class="btn btn-primary" data-open="wire" style="cursor:pointer;font-family:inherit">Play</button></div>
+        <div class="svc g-card"><div class="svc-hole"></div><h3>Circuit Memory</h3><p>Watch the signals light up, then repeat them. One more signal each level, and less time to answer.</p><button class="btn btn-primary" data-open="memo" style="cursor:pointer;font-family:inherit">Play</button></div>
       </div>
     </div>
   </section>
